@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project — MealMate (Android App)</title>
+  <meta name="description" content="Project detail — MealMate (Android App)"/>
+  <script>(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t? t==='dark': m){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{base:{900:'#0b1220',800:'#0f172a'},accent:{500:'#10b981'}}}}};</script>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body class="bg-white text-slate-900 dark:bg-base-900 dark:text-slate-100 transition-colors duration-300">
+  <header class="fixed top-0 z-50 w-full">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div class="mt-4 flex items-center justify-between rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-base-800/70 px-4 py-3 backdrop-blur">
+        <a href="../index.html#home" class="font-semibold tracking-tight text-slate-900 dark:text-white/90 hover:text-white transition"><span class="text-accent-500">&lt;/&gt;</span> Abdelrahman Lasheen</a>
+        <div class="hidden md:block">
+          <ul class="flex gap-1 text-sm">
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#home">Home</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#about">About</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#skills">Skills</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#projects">Projects</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <button id="theme-toggle" class="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 text-slate-600 hover:bg-white/10 focus:outline-none transition" aria-label="Toggle dark mode">
+          <svg id="icon-moon" class="h-5 w-5 block dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" class="h-5 w-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zM4 11h1a1 1 0 110 2H4a1 1 0 110-2z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pt-36 md:pt-40">
+    <section class="section">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">MealMate (Android App)</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl">
+        A feature-rich Android application designed to simplify recipe discovery, meal planning, and grocery management.  
+        Built with Kotlin, Firebase, and Room Database, the app provides both online and offline access with a clean Material Design interface.
+      </p>
+
+      <div class="mt-10 space-y-8">
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">What I Did</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            I developed <strong>MealMate</strong> from the ground up as a native Android app that helps users discover recipes, create grocery lists, and manage meal tasks collaboratively.  
+            The app integrates the <strong>TheMealDB API</strong> for live recipe data and uses <strong>Firebase</strong> for cloud storage and real-time synchronization across devices.
+          </p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            I implemented a responsive and modular architecture using the <strong>MVC pattern</strong>, separating logic between activities, fragments, and adapters.  
+            Users can save favorite meals, view nearby grocery stores via geotagging, and access stored data offline through the <strong>Room Database</strong>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Key Contributions</h2>
+          <ul class="mt-3 list-disc pl-6 text-slate-600 dark:text-slate-300 space-y-2">
+            <li>Developed a fully functional native Android app using Kotlin and Firebase.</li>
+            <li>Integrated TheMealDB API for live recipe search and categorization.</li>
+            <li>Implemented offline storage with Room Database and cloud backup with Firebase Realtime Database.</li>
+            <li>Added user authentication, profile customization, and favorite meal management.</li>
+            <li>Applied Material Design principles for a consistent and intuitive user interface.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Skills & Tools</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            <strong>Kotlin · Android Studio · Firebase · Room Database · TheMealDB API · MVC Architecture · Material Design · Google Maps API · UI/UX Design</strong>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">More Details</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            You can view the complete project repository, including code, architecture details, and UI previews, on GitHub:
+          </p>
+          <div class="mt-4">
+            <a href="https://github.com/abdelrahmanlasheen1/MealMate-Android-App" target="_blank" class="inline-flex items-center rounded-lg bg-accent-500 px-5 py-2 text-base-900 font-medium hover:bg-accent-400 transition">
+              View on GitHub
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+          <h2 class="font-semibold text-slate-900 dark:text-white">Outcome</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            The final app delivered a seamless experience for recipe discovery and meal organization, with stable cloud synchronization and offline functionality.  
+            This project demonstrates strong Android development skills, database design, and integration of APIs within a polished mobile interface.
+          </p>
+        </div>
+        <div class="rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+          <h2 class="font-semibold text-slate-900 dark:text-white">Author</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Created by <strong>Abdelrahman Lasheen</strong><br>© 2025
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

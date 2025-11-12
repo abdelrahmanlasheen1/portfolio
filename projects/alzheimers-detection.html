@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project — Alzheimer's Disease Detection (Deep Learning)</title>
+  <meta name="description" content="Project detail — Alzheimer's Disease Detection (Deep Learning)"/>
+  <script>(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t? t==='dark': m){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{base:{900:'#0b1220',800:'#0f172a'},accent:{500:'#10b981'}}}}};</script>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body class="bg-white text-slate-900 dark:bg-base-900 dark:text-slate-100 transition-colors duration-300">
+  <header class="fixed top-0 z-50 w-full">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div class="mt-4 flex items-center justify-between rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-base-800/70 px-4 py-3 backdrop-blur">
+        <a href="../index.html#home" class="font-semibold tracking-tight text-slate-900 dark:text-white/90 hover:text-white transition"><span class="text-accent-500">&lt;/&gt;</span> Abdelrahman Lasheen</a>
+        <div class="hidden md:block">
+          <ul class="flex gap-1 text-sm">
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#home">Home</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#about">About</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#skills">Skills</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#projects">Projects</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <button id="theme-toggle" class="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 text-slate-600 hover:bg-white/10 focus:outline-none transition" aria-label="Toggle dark mode">
+          <svg id="icon-moon" class="h-5 w-5 block dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" class="h-5 w-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zM4 11h1a1 1 0 110 2H4a1 1 0 110-2z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pt-36 md:pt-40">
+    <section class="section">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Alzheimer’s Disease Detection (Deep Learning)</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl">
+        A deep learning project focused on classifying different stages of Alzheimer’s disease using brain MRI scans.  
+        I developed and trained convolutional neural networks (CNNs) with TensorFlow and Keras to analyze MRI data and detect signs of dementia progression.
+      </p>
+
+      <div class="mt-10 space-y-8">
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">What I Did</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            I used the <strong>OASIS MRI dataset</strong> to train CNN models capable of classifying MRI scans into four categories:  
+            <em>Non-Demented, Very Mild Dementia, Mild Dementia,</em> and <em>Moderate Dementia</em>.  
+            My approach involved preprocessing and augmenting the dataset, applying transfer learning techniques, and fine-tuning pre-trained models such as <strong>ResNet50</strong> and <strong>MobileNetV2</strong> to improve classification accuracy.
+          </p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            I evaluated the models using metrics like accuracy, precision, recall, and confusion matrices to ensure consistent performance across classes and prevent overfitting during training.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Key Contributions</h2>
+          <ul class="mt-3 list-disc pl-6 text-slate-600 dark:text-slate-300 space-y-2">
+            <li>Developed CNN architectures to classify MRI scans into Alzheimer’s stages.</li>
+            <li>Preprocessed and augmented medical images to improve model generalization.</li>
+            <li>Applied transfer learning using ResNet50 and MobileNetV2 models.</li>
+            <li>Evaluated model performance through confusion matrices and metrics.</li>
+            <li>Demonstrated how AI can assist early-stage dementia detection in medical imaging.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Skills & Tools</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            <strong>TensorFlow · Keras · CNN (ResNet50, MobileNetV2) · Python · NumPy · Matplotlib · Image Preprocessing · Data Augmentation · Model Evaluation</strong>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">More Details</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            You can view the complete code implementation, training notebook, and results on GitHub:
+          </p>
+          <div class="mt-4">
+            <a href="https://github.com/abdelrahmanlasheen1/dementia-detection-cnn" target="_blank" class="inline-flex items-center rounded-lg bg-accent-500 px-5 py-2 text-base-900 font-medium hover:bg-accent-400 transition">
+              View on GitHub
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+          <h2 class="font-semibold text-slate-900 dark:text-white">Outcome</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            The final model achieved strong performance in classifying MRI scans across dementia stages, showcasing the potential of CNNs in supporting Alzheimer’s diagnosis.  
+            This project highlights practical experience in medical image processing and deep learning for healthcare applications.
+          </p>
+        </div>
+        <div class="rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+          <h2 class="font-semibold text-slate-900 dark:text-white">Author</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Created by <strong>Abdelrahman Lasheen</strong><br>© 2025
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Abdelrahman Lasheen</title>
+  <meta name="description" content="Portfolio of Abdelrahman Lasheen — Software Engineer" />
+  <script>(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t? t==='dark': m){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{base:{900:'#0b1220',800:'#0f172a'},accent:{400:'#34d399',500:'#10b981'}}}}};</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-slate-900 dark:bg-base-900 dark:text-slate-100 selection:bg-emerald-500/20 selection:text-slate-900 dark:text-white transition-colors duration-300">
+<div class="parallax fixed inset-x-0 top-10 -z-10 h-72 w-72 rounded-full bg-emerald-500/10 blur-2xl"></div>
+<div class="parallax fixed right-10 bottom-10 -z-10 h-80 w-80 rounded-full bg-teal-400/10 blur-2xl" data-depth="0.6"></div><header class="fixed top-0 z-50 w-full">
+  <nav class="mx-auto max-w-6xl px-4">
+    <div class="mt-4 flex items-center justify-between rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-base-800/70 px-4 py-3 backdrop-blur">
+      <a href="#home" class="font-semibold tracking-tight text-slate-900 dark:text-white/90 hover:text-white transition"><span class="text-accent-400">My Portfolio</a>
+      <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-slate-300 hover:bg-white/5" aria-label="Toggle navigation" aria-expanded="false">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>                <button id="theme-toggle" class="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 text-slate-600 hover:bg-white/10 focus:outline-none transition" aria-label="Toggle dark mode">
+        <svg id="icon-moon" class="h-5 w-5 block dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg id="icon-sun" class="h-5 w-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zm0 13a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM4 11a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm13-1h1a1 1 0 110 2h-1a1 1 0 110-2zM6.22 6.22a1 1 0 011.42 0l.71.7a1 1 0 11-1.41 1.42l-.72-.71a1 1 0 010-1.41zM15.66 15.66a1 1 0 011.41 0l.71.71a1 1 0 01-1.41 1.41l-.71-.71a1 1 0 010-1.41zM6.22 17.78a1 1 0 010-1.41l.71-.71a1 1 0 011.41 1.41l-.71.71a1 1 0 01-1.41 0zM15.66 8.34a1 1 0 010-1.41l.71-.71a1 1 0 111.41 1.41l-.71.71a1 1 0 01-1.41 0z"/></svg>
+      </button>
+      <div id="nav-menu" class="hidden md:block">
+        <ul class="flex gap-1 text-sm">
+          <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5 transition" href="#home">Home</a></li>
+        <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5 transition" href="#about">About</a></li>
+        <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5 transition" href="#skills">Skills</a></li>
+        <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5 transition" href="#projects">Projects</a></li>
+        <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5 transition" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="nav-mobile" class="md:hidden hidden mt-2 rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-base-800/70 backdrop-blur overflow-hidden">
+      <ul class="grid divide-y divide-white/5">
+        <li><a class="nav-link block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5" href="#home">Home</a></li>
+        <li><a class="nav-link block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5" href="#about">About</a></li>
+        <li><a class="nav-link block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5" href="#skills">Skills</a></li>
+        <li><a class="nav-link block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5" href="#projects">Projects</a></li>
+        <li><a class="nav-link block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-slate-900 dark:text-white dark:hover:bg-white/5" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main class="mx-auto max-w-6xl px-4">
+<section id="home" class="min-h-[92vh] pt-36 md:pt-40 flex items-center justify-center">
+  <div class="relative w-full">
+    <div class="parallax pointer-events-none absolute -top-16 -left-10 h-72 w-72 rounded-full bg-emerald-500/10 blur-2xl"></div>
+    <div class="parallax pointer-events-none absolute -bottom-10 -right-10 h-80 w-80 rounded-full bg-teal-400/10 blur-2xl" data-depth="0.6"></div>
+    <div class="max-w-3xl mx-auto text-center">
+    
+      <h1 class="hero-name text-4xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white md:text-6xl text-center">Abdelrahman&nbsp;Lasheen</h1>
+<p class="hero-title text-lg text-slate-600 dark:text-slate-300 md:text-2xl  mt-4 text-center">Graduate&nbsp;Computer&nbsp;Systems&nbsp;Engineer</p>
+      <div class="mt-8 flex items-center gap-4 hidden" aria-hidden="true">
+        <a href="#projects" class="inline-flex items-center gap-2 rounded-lg bg-accent-500 px-5 py-3 font-medium text-base text-base-900 hover:bg-accent-400 transition shadow-glow">View Projects</a>
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 px-5 py-3 font-medium text-base text-slate-900 dark:text-white hover:bg-white/80 dark:hover:bg-white/10 transition">Contact Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="section mt-24 scroll-mt-24">
+  <div class="grid gap-8 md:grid-cols-5 md:gap-12">
+    <div class="md:col-span-2">
+      <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">About Me</h2>
+      <p class="mt-4 md:mt-5 text-slate-600 dark:text-slate-300 max-w-4xl mx-auto text-left leading-relaxed px-4 md:px-0">Computer Systems Engineering graduate with First Class Honours, passionate about data analysis, cybersecurity, machine learning and app development. I’ve worked on projects across Android and full stack web development, as well as deep learning applications involving CNNs, RAG, and reinforcement learning. Experienced in working with databases, APIs, and version control systems, and focused on building user centred, reliable software solutions. I’m now looking to apply my technical skills and problem solving mindset to meaningful projects that drive real world impact.</p>
+    </div>
+    <div class="md:col-span-3">
+      <div class="rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 h-full p-6">
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300"><li>• Data & BI: Python (Pandas/NumPy), SQL, Power BI, Tableau</li><li>• AI/ML: TensorFlow/Keras, PyTorch; CNNs and RAG systems</li><li>• Full‑stack & APIs: React/Node.js, PHP; clean, type‑safe services</li><li>• Mobile & UX: Java (Android), Flutter; accessible, user‑centric UIs</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="skills" class="section mt-24 scroll-mt-24">
+  <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Skills</h2>
+  <p class="mt-3 font-semibold text-slate-800 dark:text-slate-200">Core stack and tools I use.</p>
+  <div class="mt-8 grid auto-rows-fr gap-6 md:grid-cols-2">
+    <div class="rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 h-full p-6 flex flex-col">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/15 text-accent-400 ring-1 ring-inset ring-accent-500/30">{}</span>
+          <h3 class="font-semibold text-slate-900 dark:text-white">Languages</h3>
+        </div>
+        <span class="text-sm text-slate-600 dark:text-slate-400"></span>
+      </div>
+      <p class="mt-3 font-semibold text-slate-800 dark:text-slate-200">Python, Java, JavaScript, Dart, PHP, SQL, HTML/CSS</p>
+    </div>
+    <div class="rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 h-full p-6 flex flex-col">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/15 text-accent-400 ring-1 ring-inset ring-accent-500/30">⚛</span>
+          <h3 class="font-semibold text-slate-900 dark:text-white">Frameworks & Libraries</h3>
+        </div>
+        <span class="text-sm text-slate-600 dark:text-slate-400"></span>
+      </div>
+      <p class="mt-3 font-semibold text-slate-800 dark:text-slate-200">TensorFlow, Keras, PyTorch, Scikit‑learn, Pandas, NumPy, Matplotlib, Flutter, React, Node.js</p>
+    </div>
+    <div class="rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 h-full p-6 flex flex-col">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-accent-500/15 text-accent-400 ring-1 ring-inset ring-accent-500/30">⚙</span>
+          <h3 class="font-semibold text-slate-900 dark:text-white">Tools & Platforms</h3>
+        </div>
+        <span class="text-sm text-slate-600 dark:text-slate-400"></span>
+      </div>
+      <p class="mt-3 font-semibold text-slate-800 dark:text-slate-200">Git, Docker, AWS, Postman, Trello, Power BI, Tableau, Excel, PostgreSQL, MySQL</p>
+    </div>
+  </div>
+</section>
+<section id="projects" class="section mt-24 scroll-mt-24">
+  <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Projects</h2>
+  <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <article class="project-card relative group rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4 transition will-change-transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+      <div class="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-emerald-500/20 to-cyan-500/10"></div>
+      <div class="mt-4"><h3 class="font-medium text-slate-900 dark:text-white group-hover:text-emerald-300 transition">World Layoffs Data Cleaning</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Cleaned and standardized a raw layoffs dataset using SQL and Python to ensure data integrity.</p></div>
+    
+    <a href='projects/world-layoffs.html' class='absolute inset-0 z-10' aria-label='World Layoffs Data Cleaning'></a></article>
+    <article class="project-card relative group rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4 transition will-change-transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+      <div class="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-violet-500/20 to-emerald-500/10"></div>
+      <div class="mt-4"><h3 class="font-medium text-slate-900 dark:text-white group-hover:text-emerald-300 transition">Alzheimer’s Disease Detection (Deep Learning)</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Built CNN models with TensorFlow/Keras achieving 100% MRI classification accuracy.</p></div>
+    
+    <a href='projects/alzheimers-detection.html' class='absolute inset-0 z-10' aria-label='Alzheimers Disease Detection (Deep Learning)'></a></article>
+    <article class="project-card relative group rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4 transition will-change-transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+      <div class="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-cyan-500/20 to-teal-500/10"></div>
+      <div class="mt-4"><h3 class="font-medium text-slate-900 dark:text-white group-hover:text-emerald-300 transition">Secure Authentication System</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Full stack authentication platform built with React, Flask, and MongoDB - featuring JWT login, OTP verification, and role-based access control.
+</p></div>
+    
+    <a href='projects/auth-system.html' class='absolute inset-0 z-10' aria-label='AI Chatbot (RAG)'></a></article>
+    <article class="project-card relative group rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4 transition will-change-transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+      <div class="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-amber-500/20 to-rose-500/10"></div>
+      <div class="mt-4"><h3 class="font-medium text-slate-900 dark:text-white group-hover:text-emerald-300 transition">MealMate (Android App)</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Native Java app for meal planning, grocery management, and task delegation.</p></div>
+    
+    <a href='projects/mealmate-android.html' class='absolute inset-0 z-10' aria-label='MealMate (Android App)'></a></article>
+    <article class="project-card relative group rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4 transition will-change-transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+      <div class="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-sky-500/20 to-indigo-500/10"></div>
+      <div class="mt-4"><h3 class="font-medium text-slate-900 dark:text-white group-hover:text-emerald-300 transition">Troubleshooting App (Flutter)</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Cross‑platform app for a UK post‑mix beverage company to streamline field support.</p></div>
+    
+    <a href='projects/troubleshooting-flutter.html' class='absolute inset-0 z-10' aria-label='Troubleshooting App (Flutter)'></a></article>
+    <article class="project-card relative group rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4 transition will-change-transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+      <div class="aspect-video w-full overflow-hidden rounded-lg bg-gradient-to-br from-emerald-500/20 to-violet-500/10"></div>
+      <div class="mt-4"><h3 class="font-medium text-slate-900 dark:text-white group-hover:text-emerald-300 transition">AI Solutions Website</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Full‑stack web app using HTML/CSS/JS and PHP for AI automation services.</p></div>
+    
+    <a href='projects/ai-solutions-website.html' class='absolute inset-0 z-10' aria-label='AI Solutions Website'></a></article>
+  </div>
+</section>   
+
+
+<section id="contact" class="section mt-24 mb-24 scroll-mt-24">
+  <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Contact</h2>
+  <p class="mt-3 text-slate-600 dark:text-slate-400">Based in Derby, UK — reach me at lasheenmana17@gmail.com or connect via LinkedIn.</p>
+  <div class="mt-6 flex flex-wrap items-center gap-4">
+    <a class="contact-icon hover-glow" href="https://github.com/abdelrahmanlasheen1?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.465-1.11-1.465-.908-.62.069-.607.069-.607 1.003.07 1.53 1.03 1.53 1.03.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.338-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.296 2.748-1.026 2.748-1.026.545 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.58.688.481A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" clip-rule="evenodd"/></svg>
+    </a>
+    <a class="contact-icon hover-glow" href="http://linkedin.com/in/abdelrahman-lasheen-bb616b276/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8.5h4V24h-4V8.5zM8.98 8.5h3.84v2.1h.06c.54-1.02 1.86-2.1 3.84-2.1 4.1 0 4.86 2.7 4.86 6.2V24h-4v-7.7c0-1.84-.04-4.2-2.56-4.2-2.56 0-2.96 2-2.96 4.06V24h-4V8.5z"/></svg>
+    </a>
+    <a class="contact-icon hover-glow" href="mailto:lasheenmana17@gmail.com" aria-label="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </a>
+  </div>
+</section>
+</main>
+<button id="backToTop" aria-label="Back to top" class="pointer-events-none fixed bottom-6 right-6 z-50 rounded-full bg-accent-500 p-3 text-base-900 shadow-lg opacity-0 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M12 4a.75.75 0 0 1 .53.22l7.5 7.5a.75.75 0 1 1-1.06 1.06L12.75 6.56V20a.75.75 0 0 1-1.5 0V6.56L5.03 12.78a.75.75 0 1 1-1.06-1.06l7.5-7.5A.75.75 0 0 1 12 4Z" clip-rule="evenodd"/></svg>
+</button>
+<footer class="mx-auto max-w-6xl px-4 pb-10 text-center text-xs text-slate-500"><div class="mt-10 border-t border-white/5 pt-6">© <span id="year"></span> Abdelrahman Lasheen. All rights reserved.</div></footer>
+<script src="script.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

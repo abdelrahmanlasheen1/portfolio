@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Project — Troubleshooting App (Flutter)</title>
+  <meta name="description" content="Project detail — Troubleshooting App (Flutter)"/>
+  <script>(function(){try{var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t? t==='dark': m){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:'class',theme:{extend:{colors:{base:{900:'#0b1220',800:'#0f172a'},accent:{500:'#10b981'}}}}};</script>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body class="bg-white text-slate-900 dark:bg-base-900 dark:text-slate-100 transition-colors duration-300">
+  <header class="fixed top-0 z-50 w-full">
+    <nav class="mx-auto max-w-6xl px-4">
+      <div class="mt-4 flex items-center justify-between rounded-xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-base-800/70 px-4 py-3 backdrop-blur">
+        <a href="../index.html#home" class="font-semibold tracking-tight text-slate-900 dark:text-white/90 hover:text-white transition"><span class="text-accent-500">&lt;/&gt;</span> Abdelrahman Lasheen</a>
+        <div class="hidden md:block">
+          <ul class="flex gap-1 text-sm">
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#home">Home</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#about">About</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#skills">Skills</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#projects">Projects</a></li>
+            <li><a class="nav-link rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900 hover:bg-slate-900/5 dark:text-slate-300 dark:hover:text-white dark:hover:bg-white/5 transition" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <button id="theme-toggle" class="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 text-slate-600 hover:bg-white/10 focus:outline-none transition" aria-label="Toggle dark mode">
+          <svg id="icon-moon" class="h-5 w-5 block dark:hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" class="h-5 w-5 hidden dark:block" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4a1 1 0 011 1v1a1 1 0 11-2 0V5a1 1 0 011-1zM4 11h1a1 1 0 110 2H4a1 1 0 110-2z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 pt-36 md:pt-40">
+    <section class="section">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Troubleshooting App (Flutter)</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-300 max-w-3xl">
+        A cross-platform Flutter app built to support a UK post-mix beverage company’s field technicians.  
+        The app streamlines troubleshooting workflows, organizes service data, and provides offline-first access to repair procedures.
+      </p>
+
+      <div class="mt-10 space-y-8">
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Overview</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Designed to enhance field support operations, this app helps technicians quickly find solutions to common issues in post-mix beverage systems.  
+            Built using Flutter and Dart, it integrates a RESTful API backend for centralized management of technical guides, parts information, and client data.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">What I Did</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            I developed the app from scratch using Flutter, focusing on a clean and intuitive UI for field engineers.  
+            Features include interactive troubleshooting flows, spare-parts lookup, starred favorites, offline caching, and push notifications for updates.
+          </p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            The project also includes an admin dashboard (web-based) that allows internal staff to upload new troubleshooting content, manage part details, and monitor app usage analytics.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Key Features</h2>
+          <ul class="mt-3 list-disc pl-6 text-slate-600 dark:text-slate-300 space-y-2">
+            <li>Guided troubleshooting flows with step-by-step instructions.</li>
+            <li>Offline access for technicians working in low-connectivity areas.</li>
+            <li>Dynamic folders for parts, towers, valves, and components.</li>
+            <li>Favorites system for saving frequently used guides.</li>
+            <li>Firebase push notifications for updates and new content.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Tech Stack</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            <strong>Flutter · Dart · REST API · Firebase · FCM · Local Storage · Provider (State Management)</strong>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">More Details</h2>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            You can explore the source code, documentation, and demo builds for this app on GitHub:
+          </p>
+          <div class="mt-4">
+            <a href="https://github.com/abdelrahmanlasheen1/troubleshooting-app" target="_blank" class="inline-flex items-center rounded-lg bg-accent-500 px-5 py-2 text-base-900 font-medium hover:bg-accent-400 transition">
+              View on GitHub
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+          <h2 class="font-semibold text-slate-900 dark:text-white">Outcome</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            The app successfully improved field response efficiency and reduced time spent on manual troubleshooting.
+            It demonstrated strong integration of Flutter’s cross-platform capabilities and scalable backend connectivity.
+          </p>
+        </div>
+        <div class="rounded-lg border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5 p-4">
+          <h2 class="font-semibold text-slate-900 dark:text-white">Author</h2>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Created by <strong>Abdelrahman Lasheen</strong><br>© 2025</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>
